@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
 
-  backendUrl: "http://localhost:8087",
+  backendUrl: "http://localhost:8080",
   loginPath: "/login",
   apiPath: "/api/",
 
