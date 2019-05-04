@@ -28,6 +28,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatMomentDateModule } from "@angular/material-moment-adapter";
 import { MatSliderModule } from '@angular/material/slider';
+import { ConfigEventsComponent } from './config-events/config-events.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { MatSliderModule } from '@angular/material/slider';
     TestApiComponent,
     LoginComponent,
     NavigationMenuComponent,
-    AdminComponent
+    AdminComponent,
+    ConfigEventsComponent
   ],
   imports: [
     BrowserModule,
