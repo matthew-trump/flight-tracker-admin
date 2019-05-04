@@ -1,0 +1,79 @@
+<h3>
+  Configured Events
+</h3>
+<ul class="list" *ngIf="configEvents$ | async; let configEvents">
+  <li class="top" *ngFor="let event of configEvents; let i=index;">
+    <div class="index">{{i+1}}</div>
+    <div>
+      <ul>
+        <li class="field">
+          <div>id</div>
+          <div>{{event.id}}</div>
+        </li>
+        <li class="field">
+          <div>type</div>
+          <div>{{event.type}}</div>
+        </li>
+        <li class="field">
+          <div>flight number</div>
+          <div>{{event.flightNumber}}</div>
+        </li>
+
+        <li class="field">
+          <div>date begin</div>
+          <div>{{event.dateBegin}}</div>
+        </li>
+        <li class="field">
+          <div>date end</div>
+          <div>{{event.dateEnd}}</div>
+        </li>
+        <li class="field">
+          <div>scheduled deparature time</div>
+          <div>{{event.timeScheduledDeparture}}</div>
+        </li>
+        <li class="field">
+          <div>scheduled arrival time</div>
+          <div>{{event.timeScheduledArrival}}</div>
+        </li>
+        <li class="field">
+          <div>origina</div>
+          <div>{{event.origin}}</div>
+        </li>
+        <li class="field">
+          <div>destination</div>
+          <div>{{event.destination}}</div>
+        </li>
+      </ul>
+    </div>
+    <div class="load">
+      <button mat-icon-button (click)="loadFlight(event)">
+        <mat-icon>flight</mat-icon>
+      </button>
+    </div>
+
+    <div class="flight">
+      <ng-container *ngIf="flight[event.id]">
+        <ng-container *ngIf="flight[event.id].message">
+          <span>{{flight[event.id].message}}</span>
+        </ng-container>
+        <ng-container *ngIf="flight[event.id].ident">
+          <ul>
+            <li>
+              <div>flight index</div>
+              <div>{{flight[event.id].flightIndex}}</div>
+            </li>
+            <li>
+              <div>departure</div>
+              <div>{{flight[event.id].departure}}</div>
+            </li>
+            <li>
+              <div>arrival</div>
+              <div>{{flight[event.id].arrival}}</div>
+            </li>
+          </ul>
+        </ng-container>
+
+      </ng-container>
+    </div>
+  </li>
+</ul>

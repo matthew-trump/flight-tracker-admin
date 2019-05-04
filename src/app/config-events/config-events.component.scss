@@ -1,0 +1,53 @@
+:host{
+  font-size: 0.9em;  
+}
+ul{
+    list-style-type: none;
+    padding-left: 0em;
+    padding-top: 0.5em;
+   
+ }
+ul.list{
+    margin-top: 0.5em;
+    border-top: none;
+    
+}
+li{
+    display: flex;
+    
+}
+li.top{
+    border-top: 1px solid #ccc;
+    padding-left: 0.5em;
+}
+li.field{
+    
+    margin-bottom: 0.2em;
+    div:nth-child(1){
+        color: #999;
+        text-align: right;
+        padding-right: 0.5em;
+        width: 12em;
+    }
+}
+div.index{
+    padding-top: 0.5em;
+    color: #999;
+}
+div.load{
+    margin-left: 0.5em;
+}
+div.flight{
+    width: 30em;
+
+    li{
+        div:nth-child(1){
+            width: 6em;
+            color: #999;
+            padding: 0.2em;
+            width: 8em;
+            padding-right: 0.4em;
+            text-align: right;
+        }
+    }
+}
