@@ -12,7 +12,7 @@ import { environment } from 'src/environments/environment';
 export class AppComponent {
 
   loggedInRoutes: any[] = [
-    { route: ['admin'], label: 'Admin' }
+    { route: ['admin/config-events'], label: 'Events' }
   ]
 
   constructor(
