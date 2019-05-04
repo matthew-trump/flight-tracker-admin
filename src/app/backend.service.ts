@@ -32,5 +32,11 @@ export class BackendService {
     protected(): Observable<TestApiResponse> {
         return this.http.get<TestApiResponse>(this.getBaseApiPath());
     }
+    getConfigEvents(): Observable<any[]> {
+        return this.http.get<any>(this.getBaseApiPath() + 'config/events');
+    }
+    getFlight(id: string): Observable<any[]> {
+        return this.http.get<any>(this.getBaseApiPath() + `tracker/${id}/next`);
+    }
 
 }
